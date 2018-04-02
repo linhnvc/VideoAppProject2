@@ -107,23 +107,32 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     //Cai dat nut Tim kiem va Them tren NavigationBar
     func setupNavBarButtons(){
-
-//        let moreImage = UIImage(named: "more2")?.withRenderingMode(.alwaysOriginal)
-//        let moreButton = UIBarButtonItem(image: moreImage, style: .plain, target: self, action: #selector(handleMore))
         let more = UIBarButtonItem(title: "•••", style: .plain, target: self, action: #selector(handleMore))
-        //let more1 = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(handleMore))
-        
-//        let image = UIBarButtonItem(image: #imageLiteral(resourceName: "youtube"), style: .plain, target: self, action: nil)
-        
         navigationItem.rightBarButtonItems = [more]
-   
     }
     
-    let settingsLauncher = SettingsLauncher()
+    lazy var settingsLauncher: SettingsLauncher = {
+        let launcher = SettingsLauncher()
+        launcher.homeController = self
+        return launcher
+    }()
     
     @objc func handleMore(){
         //hien thi menu tuy chon nhanh:
         settingsLauncher.showSttings()
+    }
+    
+    func showControllerForSetting(setting: Setting) {
+        //Chuyen sang giao dien moi:
+        let dummySettingViewController = UIViewController()
+        dummySettingViewController.view.backgroundColor = UIColor.white
+        dummySettingViewController.navigationItem.title = setting.name
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        
+        //cai dat mau tieu de tren NavigationBar:
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.red]
+        
+        navigationController?.pushViewController(dummySettingViewController, animated: true)
     }
     
     let menuBar: MenuBar = {

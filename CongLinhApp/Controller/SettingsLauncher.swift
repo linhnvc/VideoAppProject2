@@ -37,6 +37,8 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         return [Setting(name: "Cài đặt chung", imageName: "settings"), Setting(name: "Chính sách bảo mật", imageName: "privacy"), Setting(name: "Gửi phản hồi", imageName: "feedback"), Setting(name: "Trợ giúp", imageName: "help"), Setting(name: "Tài khoản", imageName: "account_settings"), Setting(name: "Hủy", imageName: "cancel")]
     }()
     
+    var homeController: HomeController?
+    
     @objc func showSttings(){
         //hien thi menu tuy chon nhanh:
         if let window = UIApplication.shared.keyWindow {
@@ -62,13 +64,21 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         }
     }
     
-    @objc func handleDismiss() {
-        UIView.animate(withDuration: 0.5) {
-            self.blackView.alpha = 0 //cham vao vi tri bat ky de chuyen lai man hinh sau khi an nut them
+    @objc func handleDismiss(setting: Setting) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            
+            self.blackView.alpha = 0
             if let window = UIApplication.shared.keyWindow {
                 
                 //day menuSettings xuong duoi ra khoi man hinh:
+                //thuc chat la thay doi toa do collectionview, day no xuong ra khoi man hinh:
                 self.collectionView.frame = CGRect(x: 0, y: window.frame.height, width: self.collectionView.frame.width, height: self.collectionView.frame.height)
+            }
+            
+        }) { (completed: Bool) in
+
+            if setting.name != "" && setting.name != "Hủy" { //khi khong an huy thi moi chuyen trang
+                self.homeController?.showControllerForSetting(setting: setting)
             }
         }
     }
@@ -91,6 +101,14 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    //xu ly click chuot vao 1 tuy chon trong menu Settings
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let setting = self.settings[indexPath.item]
+        handleDismiss(setting: setting)
+    
     }
     
     override init() {
