@@ -23,12 +23,13 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     let cellId = "cellId"
     let imageNames = ["home", "trending", "subscriptions", "account"]
 //    let labelText = ["home", "trending", "subscriptions", "account"]
+    var homeController: HomeController?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         collectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
-        
+        collectionView.backgroundColor = .rgb(displayP3Red: 182, green: 231, blue: 195)
         addSubview(collectionView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: collectionView)
@@ -36,7 +37,44 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         let selectedIndextPath = NSIndexPath(item: 0, section: 0)
         //collectionView.selectItem(at: selectedIndextPath, animated: false, scrollPosition: .none)
         collectionView.selectItem(at: selectedIndextPath as IndexPath, animated: false, scrollPosition: .top)
+        
+        setupHorizontalBar()
 
+    }
+    
+    var horizontalBarLeftAnchorConstraint: NSLayoutConstraint?
+    
+    //Thanh truot duoi tuy chon trong Menu bar
+    func setupHorizontalBar() {
+        let horizontalBarView = UIView()
+        horizontalBarView.backgroundColor = UIColor.rgb(displayP3Red: 65, green: 124, blue: 62)
+        horizontalBarView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(horizontalBarView)
+        
+        horizontalBarLeftAnchorConstraint = horizontalBarView.leftAnchor.constraint(equalTo: self.leftAnchor)
+        horizontalBarLeftAnchorConstraint?.isActive = true
+        horizontalBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        horizontalBarView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1/4).isActive = true
+        horizontalBarView.heightAnchor.constraint(equalToConstant: 4).isActive = true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+//        print(indexPath.item)
+//        let x = CGFloat(indexPath.item) * frame.width/4
+//        horizontalBarLeftAnchorConstraint?.constant = x
+//        
+//        //hieu ung dich chuyen horizontal
+//        
+//        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+//            self.layoutIfNeeded()
+//        }, completion: nil)
+        
+        
+        
+        homeController?.scrollToMenuIndex(menuIndex: indexPath.item)
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -80,14 +118,14 @@ class MenuCell: BaseCell {
     
     override var isHighlighted: Bool {
         didSet {
-            imageView.tintColor = isHighlighted ? UIColor.blue : UIColor(displayP3Red: 163/255, green: 163/255, blue: 163/255, alpha: 1)
+            imageView.tintColor = isHighlighted ? UIColor.rgb(displayP3Red: 65, green: 124, blue: 62) : UIColor(displayP3Red: 163/255, green: 163/255, blue: 163/255, alpha: 1)
             //rgb(displayP3Red: 91, green: 14, blue: 13)
         }
     }
     
     override var isSelected: Bool {
         didSet {
-            imageView.tintColor = isSelected ? UIColor.blue : UIColor(displayP3Red: 163/255, green: 163/255, blue: 163/255, alpha: 1)
+            imageView.tintColor = isSelected ? UIColor.rgb(displayP3Red: 65, green: 124, blue: 62) : UIColor(displayP3Red: 163/255, green: 163/255, blue: 163/255, alpha: 1)
         }
     }
     

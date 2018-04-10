@@ -22,10 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         let layout = UICollectionViewFlowLayout()
+        
+        //chuyen man hinh khi chuyen giua cac tuy chon tren menu bar
+//        layout.scrollDirection = .horizontal
+        
         window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
         
         //UINavigationBar.appearance().barTintColor = UIColor.rgb(displayP3Red: 230, green: 32, blue: 31)
-        UINavigationBar.appearance().barTintColor = UIColor.white
+        UINavigationBar.appearance().barTintColor = UIColor.rgb(displayP3Red: 182, green: 231, blue: 195)
         
         
         //Bo gach giua navigationBar va menuBar
@@ -35,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //application.statusBarStyle = .lightContent
         
         let statusBarBackgroundView = UIView()
-        statusBarBackgroundView.backgroundColor = UIColor.white
+        statusBarBackgroundView.backgroundColor = UIColor.rgb(displayP3Red: 109, green: 207, blue: 135)
         
         window?.addSubview(statusBarBackgroundView)
         window?.addConstraintsWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)

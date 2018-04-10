@@ -33,7 +33,7 @@ class VideoCell: BaseCell {
             setupThumbnailImage()
             setupProfileImage()
 
-            if let channelName = video?.channel?.name, let numberOfViews = video?.numberOfViews {
+            if let channelName = video?.channel?.name, let numberOfViews = video?.number_of_views {
                 let numberFormatter = NumberFormatter()
                 numberFormatter.numberStyle = .decimal
                 let subtitleText = "\(channelName) • \(numberFormatter.string(from: numberOfViews)!) views • 2 months ago"
@@ -63,7 +63,7 @@ class VideoCell: BaseCell {
     }
     
     func setupThumbnailImage(){
-        if let thumbnailImageUrl = video?.thumbnailImageName{
+        if let thumbnailImageUrl = video?.thumbnail_image_name{
             thumbnailImageView.loadImageUsingUrlString(urlString: thumbnailImageUrl)
         }
     }
@@ -89,8 +89,8 @@ class VideoCell: BaseCell {
     //duong ke giua cac video
     let separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(displayP3Red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
-        //view.backgroundColor = UIColor.black
+        //view.backgroundColor = UIColor(displayP3Red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
+        view.backgroundColor = UIColor.white
         return view
     }()
    
@@ -128,7 +128,7 @@ class VideoCell: BaseCell {
         addConstraintsWithFormat(format: "H:|-16-[v0(44)]", views: userProfileImageView)
         
         //Vertical
-        addConstraintsWithFormat(format: "V:|-0-[v0]-8-[v1(44)]-36-[v2(1)]|", views: thumbnailImageView, userProfileImageView, separatorView)
+        addConstraintsWithFormat(format: "V:|-0-[v0]-8-[v1(44)]-34-[v2(1)]|", views: thumbnailImageView, userProfileImageView, separatorView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: separatorView)
         
         //top constraint titleLabel

@@ -9,13 +9,22 @@
 import UIKit
 
 class Setting: NSObject {
-    let name: String
+    let name: SettingName
     let imageName: String
     
-    init(name: String, imageName: String) {
+    init(name: SettingName, imageName: String) {
         self.name = name
         self.imageName = imageName
     }
+}
+
+enum SettingName: String {
+    case Cancel = "Hủy"
+    case Settings = "Cài đặt chung"
+    case TermPrivacy = "Chính sách bảo mật"
+    case SendFeedback = "Gửi phản hồi"
+    case Help = "Trợ giúp"
+    case SwitchAccount = "Tài khoản"
 }
 
 class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -34,7 +43,14 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     
     let settings: [Setting] = {
         
-        return [Setting(name: "Cài đặt chung", imageName: "settings"), Setting(name: "Chính sách bảo mật", imageName: "privacy"), Setting(name: "Gửi phản hồi", imageName: "feedback"), Setting(name: "Trợ giúp", imageName: "help"), Setting(name: "Tài khoản", imageName: "account_settings"), Setting(name: "Hủy", imageName: "cancel")]
+        let settingsSetting = Setting(name: .Settings, imageName: "settings")
+        let privacySetting = Setting(name: .TermPrivacy, imageName: "privacy")
+        let sendFeedbackSetting = Setting(name: .SendFeedback, imageName: "feedback")
+        let helpSetting = Setting(name: .Help, imageName: "help")
+        let accountSetting = Setting(name: .SwitchAccount, imageName: "account_settings")
+        let cancelSetting = Setting(name: .Cancel, imageName: "cancel")
+        
+        return [settingsSetting, privacySetting, sendFeedbackSetting, helpSetting, accountSetting, cancelSetting]
     }()
     
     var homeController: HomeController?
@@ -77,8 +93,9 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
             
         }) { (completed: Bool) in
 
-            if setting.name != "" && setting.name != "Hủy" { //khi khong an huy thi moi chuyen trang
+            if setting.name != .Cancel { //khi khong an huy thi moi chuyen trang
                 self.homeController?.showControllerForSetting(setting: setting)
+                
             }
         }
     }
@@ -116,5 +133,6 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(SettingCell.self, forCellWithReuseIdentifier: cellId)
+        //UINavigationItem.LargeTitleDisplayMode = .never
     }
 }
