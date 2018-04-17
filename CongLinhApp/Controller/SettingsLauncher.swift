@@ -19,6 +19,7 @@ class Setting: NSObject {
 }
 
 enum SettingName: String {
+    case Search = "Tìm kiếm"
     case Cancel = "Hủy"
     case Settings = "Cài đặt chung"
     case TermPrivacy = "Chính sách bảo mật"
@@ -43,6 +44,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     
     let settings: [Setting] = {
         
+        let searchSetting = Setting(name: .Search, imageName: "account")
         let settingsSetting = Setting(name: .Settings, imageName: "settings")
         let privacySetting = Setting(name: .TermPrivacy, imageName: "privacy")
         let sendFeedbackSetting = Setting(name: .SendFeedback, imageName: "feedback")
@@ -50,7 +52,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         let accountSetting = Setting(name: .SwitchAccount, imageName: "account_settings")
         let cancelSetting = Setting(name: .Cancel, imageName: "cancel")
         
-        return [settingsSetting, privacySetting, sendFeedbackSetting, helpSetting, accountSetting, cancelSetting]
+        return [searchSetting, settingsSetting, privacySetting, sendFeedbackSetting, helpSetting, accountSetting, cancelSetting]
     }()
     
     var homeController: HomeController?

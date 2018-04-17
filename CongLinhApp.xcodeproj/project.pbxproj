@@ -7,42 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F02868B20791E310038E769 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02868A20791E310038E769 /* ApiService.swift */; };
-		2F20DA63204C3E2500AEDA3D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20DA62204C3E2500AEDA3D /* Extensions.swift */; };
-		2F20DA67204C4C5900AEDA3D /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20DA66204C4C5900AEDA3D /* MenuBar.swift */; };
-		2F3DDABD204BA13D00A6AEAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3DDABC204BA13D00A6AEAC /* AppDelegate.swift */; };
-		2F3DDABF204BA13D00A6AEAC /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3DDABE204BA13D00A6AEAC /* HomeController.swift */; };
 		2F3DDAC2204BA13D00A6AEAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3DDAC0204BA13D00A6AEAC /* Main.storyboard */; };
 		2F3DDAC7204BA13D00A6AEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3DDAC5204BA13D00A6AEAC /* LaunchScreen.storyboard */; };
-		2F3DDACF204BA7A700A6AEAC /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3DDACE204BA7A700A6AEAC /* VideoCell.swift */; };
-		2F583296205D856E00BB8998 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F583295205D856E00BB8998 /* SettingsLauncher.swift */; };
-		2F69A137207BAEE9003070B3 /* VideoLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F69A136207BAEE9003070B3 /* VideoLauncher.swift */; };
-		2FEC946B2058C2C5002DCBA0 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEC946A2058C2C5002DCBA0 /* Video.swift */; };
-		2FF4B62D207A079600D59A62 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4B62C207A079600D59A62 /* FeedCell.swift */; };
-		2FF4B62F207A4A3300D59A62 /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4B62E207A4A3300D59A62 /* TrendingCell.swift */; };
-		2FF4B631207A4F5000D59A62 /* SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4B630207A4F5000D59A62 /* SubscriptionCell.swift */; };
-		2FFCE2D3205E0EC100C06F3D /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCE2D2205E0EC100C06F3D /* SettingCell.swift */; };
+		2F88A16B2085022E00E17F27 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A16A2085022E00E17F27 /* ApiService.swift */; };
+		2F88A16D2085024000E17F27 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A16C2085024000E17F27 /* Video.swift */; };
+		2F88A16F2085024A00E17F27 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A16E2085024A00E17F27 /* HomeController.swift */; };
+		2F88A1712085024F00E17F27 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A1702085024F00E17F27 /* SettingsLauncher.swift */; };
+		2F88A1732085025300E17F27 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A1722085025300E17F27 /* VideoCell.swift */; };
+		2F88A1752085025800E17F27 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A1742085025800E17F27 /* MenuBar.swift */; };
+		2F88A1772085025C00E17F27 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A1762085025C00E17F27 /* SettingCell.swift */; };
+		2F88A1792085025F00E17F27 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A1782085025F00E17F27 /* FeedCell.swift */; };
+		2F88A17B2085026500E17F27 /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A17A2085026500E17F27 /* TrendingCell.swift */; };
+		2F88A17D2085026800E17F27 /* SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A17C2085026800E17F27 /* SubscriptionCell.swift */; };
+		2F88A17F2085026C00E17F27 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A17E2085026C00E17F27 /* Extensions.swift */; };
+		2F88A1812085027200E17F27 /* VideoLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A1802085027200E17F27 /* VideoLauncher.swift */; };
+		2F88A1832085027700E17F27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A1822085027700E17F27 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F02868A20791E310038E769 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		2F20DA62204C3E2500AEDA3D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		2F20DA66204C4C5900AEDA3D /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		2F3DDAB9204BA13D00A6AEAC /* CongLinhApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CongLinhApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F3DDABC204BA13D00A6AEAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F3DDABE204BA13D00A6AEAC /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		2F3DDAC1204BA13D00A6AEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F3DDAC6204BA13D00A6AEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F3DDAC8204BA13D00A6AEAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F3DDACE204BA7A700A6AEAC /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
-		2F583295205D856E00BB8998 /* SettingsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
-		2F69A136207BAEE9003070B3 /* VideoLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLauncher.swift; sourceTree = "<group>"; };
+		2F88A16A2085022E00E17F27 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiService.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/API/ApiService.swift; sourceTree = "<group>"; };
+		2F88A16C2085024000E17F27 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Video.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/Model/Video.swift; sourceTree = "<group>"; };
+		2F88A16E2085024A00E17F27 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/Controller/HomeController.swift; sourceTree = "<group>"; };
+		2F88A1702085024F00E17F27 /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsLauncher.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/Controller/SettingsLauncher.swift; sourceTree = "<group>"; };
+		2F88A1722085025300E17F27 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/View/VideoCell.swift; sourceTree = "<group>"; };
+		2F88A1742085025800E17F27 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuBar.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/View/MenuBar.swift; sourceTree = "<group>"; };
+		2F88A1762085025C00E17F27 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCell.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/View/SettingCell.swift; sourceTree = "<group>"; };
+		2F88A1782085025F00E17F27 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedCell.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/View/FeedCell.swift; sourceTree = "<group>"; };
+		2F88A17A2085026500E17F27 /* TrendingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrendingCell.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/View/TrendingCell.swift; sourceTree = "<group>"; };
+		2F88A17C2085026800E17F27 /* SubscriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionCell.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/View/SubscriptionCell.swift; sourceTree = "<group>"; };
+		2F88A17E2085026C00E17F27 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/Helpers/Extensions.swift; sourceTree = "<group>"; };
+		2F88A1802085027200E17F27 /* VideoLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoLauncher.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/Helpers/VideoLauncher.swift; sourceTree = "<group>"; };
+		2F88A1822085027700E17F27 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../videoApp/VideoAppProject2/CongLinhApp/AppDelegate.swift; sourceTree = "<group>"; };
 		2FD826642067D94B006F332F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2FEC946A2058C2C5002DCBA0 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		2FF4B62C207A079600D59A62 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
-		2FF4B62E207A4A3300D59A62 /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
-		2FF4B630207A4F5000D59A62 /* SubscriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCell.swift; sourceTree = "<group>"; };
-		2FFCE2D2205E0EC100C06F3D /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 		2F02868920791DF60038E769 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				2F02868A20791E310038E769 /* ApiService.swift */,
+				2F88A16A2085022E00E17F27 /* ApiService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -67,9 +67,9 @@
 		2F20DA61204C3DDA00AEDA3D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2F88A17E2085026C00E17F27 /* Extensions.swift */,
+				2F88A1802085027200E17F27 /* VideoLauncher.swift */,
 				2FD826642067D94B006F332F /* Assets.xcassets */,
-				2F20DA62204C3E2500AEDA3D /* Extensions.swift */,
-				2F69A136207BAEE9003070B3 /* VideoLauncher.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -77,12 +77,12 @@
 		2F20DA64204C3F2000AEDA3D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2F3DDACE204BA7A700A6AEAC /* VideoCell.swift */,
-				2F20DA66204C4C5900AEDA3D /* MenuBar.swift */,
-				2FFCE2D2205E0EC100C06F3D /* SettingCell.swift */,
-				2FF4B62C207A079600D59A62 /* FeedCell.swift */,
-				2FF4B62E207A4A3300D59A62 /* TrendingCell.swift */,
-				2FF4B630207A4F5000D59A62 /* SubscriptionCell.swift */,
+				2F88A17C2085026800E17F27 /* SubscriptionCell.swift */,
+				2F88A17A2085026500E17F27 /* TrendingCell.swift */,
+				2F88A1782085025F00E17F27 /* FeedCell.swift */,
+				2F88A1762085025C00E17F27 /* SettingCell.swift */,
+				2F88A1742085025800E17F27 /* MenuBar.swift */,
+				2F88A1722085025300E17F27 /* VideoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,8 +90,8 @@
 		2F20DA65204C3F4400AEDA3D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2F3DDABE204BA13D00A6AEAC /* HomeController.swift */,
-				2F583295205D856E00BB8998 /* SettingsLauncher.swift */,
+				2F88A1702085024F00E17F27 /* SettingsLauncher.swift */,
+				2F88A16E2085024A00E17F27 /* HomeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,12 +115,12 @@
 		2F3DDABB204BA13D00A6AEAC /* CongLinhApp */ = {
 			isa = PBXGroup;
 			children = (
+				2F88A1822085027700E17F27 /* AppDelegate.swift */,
 				2F02868920791DF60038E769 /* API */,
 				2FEC94692058C28F002DCBA0 /* Model */,
 				2F20DA65204C3F4400AEDA3D /* Controller */,
 				2F20DA64204C3F2000AEDA3D /* View */,
 				2F20DA61204C3DDA00AEDA3D /* Helpers */,
-				2F3DDABC204BA13D00A6AEAC /* AppDelegate.swift */,
 				2F3DDAC0204BA13D00A6AEAC /* Main.storyboard */,
 				2F3DDAC5204BA13D00A6AEAC /* LaunchScreen.storyboard */,
 				2F3DDAC8204BA13D00A6AEAC /* Info.plist */,
@@ -131,7 +131,7 @@
 		2FEC94692058C28F002DCBA0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2FEC946A2058C2C5002DCBA0 /* Video.swift */,
+				2F88A16C2085024000E17F27 /* Video.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +168,7 @@
 				TargetAttributes = {
 					2F3DDAB8204BA13D00A6AEAC = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -207,19 +208,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F3DDABF204BA13D00A6AEAC /* HomeController.swift in Sources */,
-				2FF4B62D207A079600D59A62 /* FeedCell.swift in Sources */,
-				2FF4B62F207A4A3300D59A62 /* TrendingCell.swift in Sources */,
-				2FEC946B2058C2C5002DCBA0 /* Video.swift in Sources */,
-				2FFCE2D3205E0EC100C06F3D /* SettingCell.swift in Sources */,
-				2F3DDABD204BA13D00A6AEAC /* AppDelegate.swift in Sources */,
-				2F583296205D856E00BB8998 /* SettingsLauncher.swift in Sources */,
-				2F69A137207BAEE9003070B3 /* VideoLauncher.swift in Sources */,
-				2F02868B20791E310038E769 /* ApiService.swift in Sources */,
-				2F3DDACF204BA7A700A6AEAC /* VideoCell.swift in Sources */,
-				2F20DA63204C3E2500AEDA3D /* Extensions.swift in Sources */,
-				2FF4B631207A4F5000D59A62 /* SubscriptionCell.swift in Sources */,
-				2F20DA67204C4C5900AEDA3D /* MenuBar.swift in Sources */,
+				2F88A1732085025300E17F27 /* VideoCell.swift in Sources */,
+				2F88A1712085024F00E17F27 /* SettingsLauncher.swift in Sources */,
+				2F88A17D2085026800E17F27 /* SubscriptionCell.swift in Sources */,
+				2F88A1752085025800E17F27 /* MenuBar.swift in Sources */,
+				2F88A16B2085022E00E17F27 /* ApiService.swift in Sources */,
+				2F88A1772085025C00E17F27 /* SettingCell.swift in Sources */,
+				2F88A1792085025F00E17F27 /* FeedCell.swift in Sources */,
+				2F88A1812085027200E17F27 /* VideoLauncher.swift in Sources */,
+				2F88A1832085027700E17F27 /* AppDelegate.swift in Sources */,
+				2F88A16D2085024000E17F27 /* Video.swift in Sources */,
+				2F88A16F2085024A00E17F27 /* HomeController.swift in Sources */,
+				2F88A17F2085026C00E17F27 /* Extensions.swift in Sources */,
+				2F88A17B2085026500E17F27 /* TrendingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,12 +357,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AD7A8Q2P9;
 				INFOPLIST_FILE = CongLinhApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cong-Linh.CongLinhApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CongLinhApp/API/CongLinhApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -371,12 +375,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AD7A8Q2P9;
 				INFOPLIST_FILE = CongLinhApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cong-Linh.CongLinhApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CongLinhApp/API/CongLinhApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

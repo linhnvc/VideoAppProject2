@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
+class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
 //    var videos: [Video] = {
 //
@@ -56,6 +56,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         titleLabel.textColor = UIColor.black
         titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
         navigationItem.titleView = titleLabel
+        //navigationItem.largeTitleDisplayMode = .always
         
         setupCollectionView()
         setupNavBarButtons()
@@ -89,6 +90,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.isPagingEnabled = true
     }
     
+    let resultController = UICollectionViewController()
+    
     //Cai dat nut Tim kiem va Them tren NavigationBar
     func setupNavBarButtons(){
         let more = UIBarButtonItem(title: "•••", style: .plain, target: self, action: #selector(handleMore))
@@ -97,8 +100,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationItem.rightBarButtonItems = [more, search]
         //navigationController?.navigationBar.prefersLargeTitles = true
         
-        //let searchController = UISearchController(searchResultsController: nil)
-        //navigationItem.searchController = searchController
+        let searchController = UISearchController(searchResultsController: resultController)
+        navigationItem.searchController = searchController
+        
+        
     }
     
     lazy var settingsLauncher: SettingsLauncher = {
@@ -113,9 +118,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     @objc func handleSearch() {
-        scrollToMenuIndex(menuIndex: 2)
+        //navigationController?.pushViewController(SearchView(), animated: true)
     }
     
+    //Truot den man hinh co chi so la tham so truyen vao
     func scrollToMenuIndex(menuIndex: Int) {
         let indexPath = NSIndexPath(item: menuIndex, section: 0)
         collectionView?.scrollToItem(at: indexPath as IndexPath, at: .left, animated: true)
@@ -132,13 +138,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     
-    
-    
-    
     func showControllerForSetting(setting: Setting) {
         //Chuyen sang giao dien moi:
         let dummySettingViewController = UIViewController()
-        dummySettingViewController.view.backgroundColor = UIColor.white
+        dummySettingViewController.view.backgroundColor = UIColor.blue
         dummySettingViewController.navigationItem.title = setting.name.rawValue
         
         //mau navigationBar man hinh chuyen den
@@ -147,8 +150,11 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         //cai dat mau tieu de tren NavigationBar:
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.red]
         
-        navigationController?.pushViewController(dummySettingViewController, animated: true)
-        //navigationItem.largeTitleDisplayMode = .never
+//        if setting.name.rawValue == "Tìm kiếm" {
+//            //navigationController?.pushViewController(SearchView(), animated: true)
+//        } else {
+            navigationController?.pushViewController(dummySettingViewController, animated: true)
+//        }
     }
     
     lazy var menuBar: MenuBar = {
@@ -203,12 +209,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         let index = targetContentOffset.pointee.x / view.frame.width
         let indexPath = NSIndexPath(item: Int(index), section: 0)
         menuBar.collectionView.selectItem(at: indexPath as IndexPath, animated: true, scrollPosition: .left)
-        
-//        if let titleLabel = navigationItem.titleView as? UILabel {
-//            titleLabel.text = "  \(titles[Int(index)])"
-//            titleLabel.textColor = UIColor.black
-//            titleLabel.font = UIFont.systemFont(ofSize: 18)
-//        }
+       
         setTitleForIndex(index: Int(index))
     }
 
