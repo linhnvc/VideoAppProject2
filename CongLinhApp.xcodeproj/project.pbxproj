@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F1254A8208881F6000E34A3 /* AccountSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1254A7208881F6000E34A3 /* AccountSetting.swift */; };
 		2F3DDAC2204BA13D00A6AEAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3DDAC0204BA13D00A6AEAC /* Main.storyboard */; };
 		2F3DDAC7204BA13D00A6AEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3DDAC5204BA13D00A6AEAC /* LaunchScreen.storyboard */; };
+		2F8302F420885F370056C582 /* CollectVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8302F320885F370056C582 /* CollectVideo.swift */; };
 		2F88A16B2085022E00E17F27 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A16A2085022E00E17F27 /* ApiService.swift */; };
 		2F88A16D2085024000E17F27 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A16C2085024000E17F27 /* Video.swift */; };
 		2F88A16F2085024A00E17F27 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A16E2085024A00E17F27 /* HomeController.swift */; };
@@ -22,13 +24,17 @@
 		2F88A17F2085026C00E17F27 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A17E2085026C00E17F27 /* Extensions.swift */; };
 		2F88A1812085027200E17F27 /* VideoLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A1802085027200E17F27 /* VideoLauncher.swift */; };
 		2F88A1832085027700E17F27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A1822085027700E17F27 /* AppDelegate.swift */; };
+		2FE1387F208781E1001D07F1 /* LikeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1387E208781E1001D07F1 /* LikeBar.swift */; };
+		2FF0E905208861DC00AD3585 /* AccountInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0E904208861DC00AD3585 /* AccountInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F1254A7208881F6000E34A3 /* AccountSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetting.swift; sourceTree = "<group>"; };
 		2F3DDAB9204BA13D00A6AEAC /* CongLinhApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CongLinhApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F3DDAC1204BA13D00A6AEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F3DDAC6204BA13D00A6AEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F3DDAC8204BA13D00A6AEAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F8302F320885F370056C582 /* CollectVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectVideo.swift; sourceTree = "<group>"; };
 		2F88A16A2085022E00E17F27 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiService.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/API/ApiService.swift; sourceTree = "<group>"; };
 		2F88A16C2085024000E17F27 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Video.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/Model/Video.swift; sourceTree = "<group>"; };
 		2F88A16E2085024A00E17F27 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/Controller/HomeController.swift; sourceTree = "<group>"; };
@@ -43,6 +49,8 @@
 		2F88A1802085027200E17F27 /* VideoLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoLauncher.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/Helpers/VideoLauncher.swift; sourceTree = "<group>"; };
 		2F88A1822085027700E17F27 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../videoApp/VideoAppProject2/CongLinhApp/AppDelegate.swift; sourceTree = "<group>"; };
 		2FD826642067D94B006F332F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2FE1387E208781E1001D07F1 /* LikeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeBar.swift; sourceTree = "<group>"; };
+		2FF0E904208861DC00AD3585 /* AccountInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,10 @@
 				2F88A1762085025C00E17F27 /* SettingCell.swift */,
 				2F88A1742085025800E17F27 /* MenuBar.swift */,
 				2F88A1722085025300E17F27 /* VideoCell.swift */,
+				2FE1387E208781E1001D07F1 /* LikeBar.swift */,
+				2F8302F320885F370056C582 /* CollectVideo.swift */,
+				2FF0E904208861DC00AD3585 /* AccountInformation.swift */,
+				2F1254A7208881F6000E34A3 /* AccountSetting.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,13 +223,17 @@
 				2F88A1732085025300E17F27 /* VideoCell.swift in Sources */,
 				2F88A1712085024F00E17F27 /* SettingsLauncher.swift in Sources */,
 				2F88A17D2085026800E17F27 /* SubscriptionCell.swift in Sources */,
+				2FF0E905208861DC00AD3585 /* AccountInformation.swift in Sources */,
 				2F88A1752085025800E17F27 /* MenuBar.swift in Sources */,
 				2F88A16B2085022E00E17F27 /* ApiService.swift in Sources */,
+				2F8302F420885F370056C582 /* CollectVideo.swift in Sources */,
 				2F88A1772085025C00E17F27 /* SettingCell.swift in Sources */,
 				2F88A1792085025F00E17F27 /* FeedCell.swift in Sources */,
 				2F88A1812085027200E17F27 /* VideoLauncher.swift in Sources */,
+				2F1254A8208881F6000E34A3 /* AccountSetting.swift in Sources */,
 				2F88A1832085027700E17F27 /* AppDelegate.swift in Sources */,
 				2F88A16D2085024000E17F27 /* Video.swift in Sources */,
+				2FE1387F208781E1001D07F1 /* LikeBar.swift in Sources */,
 				2F88A16F2085024A00E17F27 /* HomeController.swift in Sources */,
 				2F88A17F2085026C00E17F27 /* Extensions.swift in Sources */,
 				2F88A17B2085026500E17F27 /* TrendingCell.swift in Sources */,
