@@ -6,6 +6,8 @@
 //  Copyright © 2018 nguyen van cong linh. All rights reserved.
 //
 
+//  Thanh tuy chon trong Video Player View: Like, Dislike,...
+
 import UIKit
 
 class LikeBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -70,6 +72,7 @@ class LikeCell: BaseCell {
     let imageView: UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(named: "trending")
+        iv.tintColor = UIColor.rgb(displayP3Red: 183, green: 183, blue: 183)
         return iv
     }()
     

@@ -6,6 +6,8 @@
 //  Copyright © 2018 nguyen van cong linh. All rights reserved.
 //
 
+//  View hien thi thong tin tai khoan trong Video Player View:
+
 import UIKit
 
 class AccountInformation: UIView {

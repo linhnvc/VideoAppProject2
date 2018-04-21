@@ -6,6 +6,8 @@
 //  Copyright © 2018 nguyen van cong linh. All rights reserved.
 //
 
+//  View hien thi video lien quan voi video dang chay:
+
 import UIKit
 
 class CollectVideo: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
