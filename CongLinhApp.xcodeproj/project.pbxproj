@@ -26,8 +26,9 @@
 		2F88A1812085027200E17F27 /* VideoLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A1802085027200E17F27 /* VideoLauncher.swift */; };
 		2F88A1832085027700E17F27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88A1822085027700E17F27 /* AppDelegate.swift */; };
 		2F9E5FA0208A3B2600E021DF /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E5F9F208A3B2600E021DF /* AccountCell.swift */; };
+		2FB9A8C5208C30E9002C8FD1 /* LikedVideosList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9A8C4208C30E9002C8FD1 /* LikedVideosList.swift */; };
+		2FB9A8C7208C7D57002C8FD1 /* MyChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9A8C6208C7D57002C8FD1 /* MyChannel.swift */; };
 		2FC64DFD208B9F1000795D0F /* ViewForTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC64DFC208B9F1000795D0F /* ViewForTest.swift */; };
-		2FD488BC208AE8A100BCCB5E /* AccountAfterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD488BB208AE8A100BCCB5E /* AccountAfterLogin.swift */; };
 		2FD488BE208B337C00BCCB5E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD488BD208B337C00BCCB5E /* LoginController.swift */; };
 		2FD488C0208B962200BCCB5E /* SettingAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD488BF208B962200BCCB5E /* SettingAccount.swift */; };
 		2FE1387F208781E1001D07F1 /* LikeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1387E208781E1001D07F1 /* LikeBar.swift */; };
@@ -56,8 +57,9 @@
 		2F88A1802085027200E17F27 /* VideoLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoLauncher.swift; path = ../../../../videoApp/VideoAppProject2/CongLinhApp/Helpers/VideoLauncher.swift; sourceTree = "<group>"; };
 		2F88A1822085027700E17F27 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../videoApp/VideoAppProject2/CongLinhApp/AppDelegate.swift; sourceTree = "<group>"; };
 		2F9E5F9F208A3B2600E021DF /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		2FB9A8C4208C30E9002C8FD1 /* LikedVideosList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedVideosList.swift; sourceTree = "<group>"; };
+		2FB9A8C6208C7D57002C8FD1 /* MyChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChannel.swift; sourceTree = "<group>"; };
 		2FC64DFC208B9F1000795D0F /* ViewForTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewForTest.swift; sourceTree = "<group>"; };
-		2FD488BB208AE8A100BCCB5E /* AccountAfterLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAfterLogin.swift; sourceTree = "<group>"; };
 		2FD488BD208B337C00BCCB5E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		2FD488BF208B962200BCCB5E /* SettingAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAccount.swift; sourceTree = "<group>"; };
 		2FD826642067D94B006F332F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,18 +99,19 @@
 		2F20DA64204C3F2000AEDA3D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2F88A1782085025F00E17F27 /* FeedCell.swift */,
 				2F88A17C2085026800E17F27 /* SubscriptionCell.swift */,
 				2F88A17A2085026500E17F27 /* TrendingCell.swift */,
 				2F9E5F9F208A3B2600E021DF /* AccountCell.swift */,
-				2F88A1782085025F00E17F27 /* FeedCell.swift */,
+				2F0BF8EF2089E697001B8EA8 /* SubList.swift */,
+				2FB9A8C4208C30E9002C8FD1 /* LikedVideosList.swift */,
+				2FB9A8C6208C7D57002C8FD1 /* MyChannel.swift */,
 				2F88A1762085025C00E17F27 /* SettingCell.swift */,
 				2F88A1742085025800E17F27 /* MenuBar.swift */,
 				2F88A1722085025300E17F27 /* VideoCell.swift */,
 				2FE1387E208781E1001D07F1 /* LikeBar.swift */,
 				2F8302F320885F370056C582 /* CollectVideo.swift */,
 				2FF0E904208861DC00AD3585 /* AccountInformation.swift */,
-				2F0BF8EF2089E697001B8EA8 /* SubList.swift */,
-				2FD488BB208AE8A100BCCB5E /* AccountAfterLogin.swift */,
 				2FD488BF208B962200BCCB5E /* SettingAccount.swift */,
 				2FC64DFC208B9F1000795D0F /* ViewForTest.swift */,
 			);
@@ -245,9 +248,9 @@
 				2FC64DFD208B9F1000795D0F /* ViewForTest.swift in Sources */,
 				2F0BF8F02089E697001B8EA8 /* SubList.swift in Sources */,
 				2F88A1752085025800E17F27 /* MenuBar.swift in Sources */,
-				2FD488BC208AE8A100BCCB5E /* AccountAfterLogin.swift in Sources */,
 				2F88A16B2085022E00E17F27 /* ApiService.swift in Sources */,
 				2F8302F420885F370056C582 /* CollectVideo.swift in Sources */,
+				2FB9A8C7208C7D57002C8FD1 /* MyChannel.swift in Sources */,
 				2F88A1772085025C00E17F27 /* SettingCell.swift in Sources */,
 				2F88A1792085025F00E17F27 /* FeedCell.swift in Sources */,
 				2F88A1812085027200E17F27 /* VideoLauncher.swift in Sources */,
@@ -259,6 +262,7 @@
 				2F88A16D2085024000E17F27 /* Video.swift in Sources */,
 				2FE1387F208781E1001D07F1 /* LikeBar.swift in Sources */,
 				2F88A16F2085024A00E17F27 /* HomeController.swift in Sources */,
+				2FB9A8C5208C30E9002C8FD1 /* LikedVideosList.swift in Sources */,
 				2F88A17F2085026C00E17F27 /* Extensions.swift in Sources */,
 				2F88A17B2085026500E17F27 /* TrendingCell.swift in Sources */,
 			);

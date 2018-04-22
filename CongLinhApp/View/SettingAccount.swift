@@ -10,8 +10,8 @@ import UIKit
 
 class SettingAccount: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     let id = "cellId"
-    let imageNames = ["home", "trending", "subscriptions", "account", "trending"]
-    let titles = ["Kenh cua toi", "Chuyen doi tai khoan", "Cai dat", "Dieu khoan va chinh sach bao mat", "Tro giup va phan hoi"]
+    let imageNames = ["home", "trending", "subscriptions", "account", "trending", "home"]
+    let titles = ["Kenh cua toi", "Chuyen doi tai khoan", "Cai dat", "Dieu khoan va chinh sach bao mat", "Tro giup va phan hoi", "Dang xuat"]
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -33,13 +33,17 @@ class SettingAccount: UIView, UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return imageNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: id, for: indexPath) as! SettingAccountCell
         cell.imageView.image = UIImage(named: imageNames[indexPath.item])
         cell.title.text = titles[indexPath.item]
+        if indexPath.item == 5 {
+            cell.title.textColor = UIColor.red
+            cell.title.font = UIFont.boldSystemFont(ofSize: 18)
+        }
         return cell
     }
     

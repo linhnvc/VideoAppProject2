@@ -52,6 +52,23 @@ class AccountCell: BaseCell {
         return num
     }()
     
+    
+    
+    let subList: SubList = {
+        let sublist = SubList()
+        return sublist
+    }()
+    
+    let likedVideosList: LikedVideosList = {
+        let list = LikedVideosList()
+        return list
+    }()
+    
+    let myChannel: MyChannel = {
+        let myChannel = MyChannel()
+        return myChannel
+    }()
+    
     override func setupViews() {
         
         addSubview(coverPhoto)
@@ -59,13 +76,16 @@ class AccountCell: BaseCell {
         addSubview(avatar)
         addSubview(channelName)
         addSubview(numberOfSubscribes)
+        addSubview(subList)
+        addSubview(likedVideosList)
+        addSubview(myChannel)
         backgroundColor = .clear
         
         addConstraintsWithFormat(format: "H:|[v0]|", views: coverPhoto)
         addConstraintsWithFormat(format: "V:[v0(120)]", views: coverPhoto)
         
         addConstraintsWithFormat(format: "H:|-20-[v0(60)]", views: avatar)
-        addConstraintsWithFormat(format: "V:|-90-[v0(60)]", views: avatar)
+        addConstraintsWithFormat(format: "V:|-90-[v0(60)]-20-[v1(100)]-20-[v2(125)]-20-[v3(125)]", views: avatar, subList, likedVideosList, myChannel)
         
         addConstraintsWithFormat(format: "H:[v0]", views: buttonAddCoverPhoto)
         addConstraint(NSLayoutConstraint(item: buttonAddCoverPhoto, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
@@ -75,7 +95,9 @@ class AccountCell: BaseCell {
         addConstraintsWithFormat(format: "H:|-90-[v0]", views: numberOfSubscribes)
         addConstraintsWithFormat(format: "V:|-94-[v0]-6-[v1]", views: channelName, numberOfSubscribes)
         
-        
+        addConstraintsWithFormat(format: "H:|-10-[v0]|", views: subList)
+        addConstraintsWithFormat(format: "H:|-10-[v0]|", views: likedVideosList)
+        addConstraintsWithFormat(format: "H:|-10-[v0]|", views: myChannel)
     }
     
     

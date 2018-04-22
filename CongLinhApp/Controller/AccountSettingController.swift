@@ -94,18 +94,21 @@ class AccountSettingController: UIViewController {
         view.addConstraintsWithFormat(format: "H:|-90-[v0]", views: numberOfViews)
         view.addConstraintsWithFormat(format: "H:|-10-[v0]|", views: settingAccount)
         
-        
-
-
     }
     
     
     //Chuyen man hinh khi chon 1 tuy chon trong Setting Account
     func didSelectCellSetingAccount(x: Int) {
         if x == 1 {
-            print(x)
+            print("Ban vua chon row thu 2")
             //present(ViewForTest(), animated: true, completion: nil)
             self.navigationController?.pushViewController(ViewForTest(), animated: true)
+        }
+        
+        if x == 5 {
+            print("Ban vua chon row thu 6")
+            let alert: UIAlertController = UIAlertController(title: "Notification", message: "Ban co chac chan muon dang xuat", preferredStyle: UIAlertControllerStyle.alert)
+            present(alert, animated: true, completion: nil)
         }
     }
     

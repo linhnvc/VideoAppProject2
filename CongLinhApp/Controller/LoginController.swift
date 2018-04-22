@@ -34,9 +34,9 @@ class LoginController: UIViewController {
     
     @objc func handleLogin(){
         
-        let username = usernameTextField.text
+        let username = usernameTextField.text?.lowercased()
         let password = passwdTextField.text
-        if username == "" && password == "" {
+        if username == "conglinh" && password == "0000" {
             navigationController?.pushViewController(AccountSettingController(), animated: true)
             //present(AccountSetting(), animated: true, completion: nil)
             print("Login")
@@ -52,7 +52,7 @@ class LoginController: UIViewController {
             alert.addAction(buttonOK)
             present(alert, animated: true, completion: nil)
             print("Chua nhap password")
-        } else if password == "z" && username == "" {
+        } else if password == "" && username == "" {
             let alert: UIAlertController = UIAlertController(title: "Thong bao", message: "Ban chua nhap username va password", preferredStyle: UIAlertControllerStyle.alert)
             let buttonOK: UIAlertAction = UIAlertAction(title: "Nhap lai", style: .destructive, handler: nil)
             alert.addAction(buttonOK)
@@ -72,14 +72,14 @@ class LoginController: UIViewController {
     
     let usernameTextField: UITextField = {
         let tf = UITextField()
-        tf.placeholder = "Username"
+        tf.placeholder = "👤 Username"
         tf.translatesAutoresizingMaskIntoConstraints = false
         return tf
     }()
     
     let passwdTextField: UITextField = {
         let tf = UITextField()
-        tf.placeholder = "Password"
+        tf.placeholder = "🔒 Password"
         tf.isSecureTextEntry = true
         tf.translatesAutoresizingMaskIntoConstraints = false
         return tf
