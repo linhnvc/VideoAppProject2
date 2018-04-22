@@ -113,7 +113,7 @@ class AccountSettingController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let alert: UIAlertController = UIAlertController(title: "Thong bao", message: "Ban da dang nhap thanh cong", preferredStyle: .alert)
+        let alert: UIAlertController = UIAlertController(title: "Ban da dang nhap thanh cong", message: nil, preferredStyle: .alert)
         let buttonOk = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(buttonOk)
         present(alert, animated: true, completion: nil)
