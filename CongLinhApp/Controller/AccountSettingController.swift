@@ -55,21 +55,6 @@ class AccountSettingController: UIViewController {
         return cellSetting
     }()
     
-//    lazy var backToHome: UIButton = {
-//        let btn = UIButton(type: .system)
-//        btn.setTitle("Home", for: .normal)
-//        btn.addTarget(self, action: #selector(backHome), for: .touchUpInside)
-//
-//        return btn
-//    }()
-//
-//    @objc func backHome() {
-//        //let loginController = LoginController()
-//        //navigationController?.pushViewController(loginController, animated: true)
-//        present(LoginController(), animated: true, completion: nil)
-//        print("Go back Home")
-//    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -107,7 +92,7 @@ class AccountSettingController: UIViewController {
         
         if x == 5 {
             print("Ban vua chon row thu 6")
-            let alert: UIAlertController = UIAlertController(title: "Notification", message: "Ban co chac chan muon dang xuat", preferredStyle: UIAlertControllerStyle.alert)
+            let alert: UIAlertController = UIAlertController(title: "Notification", message: "Ban co chac chan muon dang xuat", preferredStyle: UIAlertControllerStyle.actionSheet)
             present(alert, animated: true, completion: nil)
         }
     }
@@ -118,50 +103,6 @@ class AccountSettingController: UIViewController {
         alert.addAction(buttonOk)
         present(alert, animated: true, completion: nil)
     }
-    
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//        let alert: UIAlertController = UIAlertController(title: "Login", message: "Please enter your yourname and password", preferredStyle: UIAlertControllerStyle.alert)
-//        alert.addTextField { (txtEmail) in
-//            txtEmail.placeholder = "👤 Username"
-//        }
-//        alert.addTextField { (txtPassword) in
-//            txtPassword.placeholder = "🔒 Password"
-//            txtPassword.isSecureTextEntry = true
-//        }
-//        let btnLogin: UIAlertAction = UIAlertAction(title: "Login", style: .destructive) { (btnLogin) in
-//            let username: String = alert.textFields![0].text!
-//            let password: String = alert.textFields![1].text!
-//            if username == "conglinh" && password == "0000" {
-//                let alert1: UIAlertController = UIAlertController(title: "Notice", message: "Thanh cong", preferredStyle: .alert)
-//                let btnOk: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-//                alert1.addAction(btnOk)
-//                self.present(alert1, animated: true, completion: {
-//
-//
-//                })
-//
-//            } else {
-//                let alert1: UIAlertController = UIAlertController(title: "Notice", message: "Fail", preferredStyle: .alert)
-//                let btnOk: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-//                alert1.addAction(btnOk)
-//                self.present(alert1, animated: true, completion: {
-//                    self.present(alert, animated: true, completion: nil)
-//                })
-//            }
-//
-//
-//        }
-//        let btnCancel: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { (btnCancel) in
-//
-//        }
-//        alert.addAction(btnLogin)
-//        alert.addAction(btnCancel)
-//
-//        present(alert, animated: true, completion: nil)
-//    }
-    
-    
     
 }
 

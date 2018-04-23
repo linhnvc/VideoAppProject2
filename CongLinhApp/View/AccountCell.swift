@@ -12,9 +12,6 @@ class AccountCell: BaseCell {
     
     let coverPhoto: UIImageView = {
         let imageView = UIImageView()
-        //imageView.image = UIImage(named: "TaConThuocVeNhau")
-        //imageView.contentMode = .scaleAspectFill
-        //imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = UIColor.rgb(displayP3Red: 183, green: 183, blue: 183)
         return imageView
     }()
